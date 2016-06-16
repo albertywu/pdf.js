@@ -1,3 +1,9 @@
+# Re-skin of PDF.js
+
+This fork provides a new skin layer for PDF.js
+
+---
+
 # PDF.js
 
 PDF.js is a Portable Document Format (PDF) viewer that is built with HTML5.
