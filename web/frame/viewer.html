@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test iFrame</title>
+  <script src="app.js"></script>
+</head>
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+
+    #pdf-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      outline: 1px solid blue;
+      width: 300px;
+      height: 100%;
+    }
+
+    #pdf-container a {
+      display: inline-block;
+      height: 50px;
+      line-height: 50px;
+      width: 100%;
+      background-color: #ccc;
+      cursor: pointer;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 300px;
+      right: 0;
+      bottom: 0;
+      width: calc(100% - 300px);
+      height: 100%;
+      border: 0;
+    }
+  </style>
+
+  <section id="pdf-container"></section>
+
+  <iframe
+    id="viewer"
+    src="../viewer.html?file=/test/pdfs/annotation-highlight.pdf">
+  </iframe>
+
+</body>
+</html>
