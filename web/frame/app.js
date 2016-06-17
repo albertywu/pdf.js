@@ -17,13 +17,14 @@ class PdfManager {
     this.pdfs.forEach(pdf => {
       const a = document.createElement('a')
       a.innerHTML = pdf.name
-      a.addEventListener('click', () => viewer.src = pdf.path)
+      a.addEventListener('click', () => viewer.src = `../viewer.html?file=${pdf.path}`)
       this.container.appendChild(a)
     })
   }
 }
 
 const pdfs = [
+  new Pdf('multi page', '/web/compressed.tracemonkey-pldi-09.pdf'),
   new Pdf('annotation-highlight', '/test/pdfs/annotation-highlight.pdf'),
   new Pdf('annotation-tx', '/test/pdfs/annotation-tx.pdf'),
   new Pdf('annotation-strikeout', '/test/pdfs/annotation-strikeout.pdf'),
